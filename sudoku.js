@@ -24,7 +24,7 @@ function checkIsValidBoardInput(input) {
 
       if (dataSet.has(rowRule)) {
         isValidSudoku = false;
-        message = `Invalid Sudoku Input, Rule has been broken at Row ${row+1},${col+1}`;
+        message = `Invalid Sudoku Input, Rule has been broken at Row ${row+1}, Col ${col+1}`;
         break;
       } else {
         dataSet.add(rowRule);
@@ -34,7 +34,7 @@ function checkIsValidBoardInput(input) {
 
       if (dataSet.has(colRule)) {
         isValidSudoku = false;
-        message = `Invalid Sudoku Input, Rule has been broken at Col ${col+1},${row+1}`;
+        message = `Invalid Sudoku Input, Rule has been broken at Col ${col+1}, Row ${row+1}`;
         break;
       } else {
         dataSet.add(colRule);
