@@ -17,5 +17,5 @@ This app provides the solution for random sudoku problems where you can put the 
   * Solve button in the UI will get you the resultant puzzle with solved values.
 
 ## Complexity
- * Complexity of this application is O(n^2).
- * As far as complexity is concerned it will be ok to have O(n^2). complexity as the standard values for the Sudoku is 9x9. Hence complexity is not big threat considering the Application.
+ * Complexity of this application is O(n^3).
+ * As far as complexity is concerned it will be ok to have O(n^3). complexity as the standard values for the Sudoku is 9x9. Hence complexity is not big threat considering the Application.
