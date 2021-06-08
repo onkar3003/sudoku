@@ -11,7 +11,7 @@ const emptyPuzzle = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
-function checIsValidBoardInput(input) {
+function checkIsValidBoardInput(input) {
   let dataSet = new Set();
   let len = input.length;
   let isValidSudoku = true;
@@ -138,11 +138,11 @@ function addCustomInput(output = emptyPuzzle) {
 }
 
 function updatePuzzle() {
-  let tabel = document.getElementById('grid');
-  let rowLength = tabel.rows.length;
+  let table = document.getElementById('grid');
+  let rowLength = table.rows.length;
 
   for (i = 0; i < rowLength; i++) {
-    var inputs = tabel.rows.item(i).getElementsByTagName("input");
+    var inputs = table.rows.item(i).getElementsByTagName("input");
     var colLength = inputs.length;
 
     for (var j = 0; j < colLength; j++) {
@@ -151,7 +151,7 @@ function updatePuzzle() {
     }
   }
 
-  let isValid =  checIsValidBoardInput(emptyPuzzle)
+  let isValid =  checkIsValidBoardInput(emptyPuzzle)
   if (isValid.isValidSudoku) {
     alert(`Your input has been submiited successfully!!!`)
     loadDefaultPuzzle(emptyPuzzle)
@@ -170,3 +170,16 @@ function clearPuzzle() {
   loadDefaultPuzzle(emptyPuzzle)
 }
 
+function randomInputGenerator(randomPuzzle = emptyPuzzle) {
+  for (let index = 0; index < 17; index++) {
+    var randRowIndex = Math.floor(Math.random() * 8);
+    var randColIndex = Math.floor(Math.random() * 8);
+    var randNumber = Math.floor(Math.random() * 9);
+
+    if (checkValidPlacement(randomPuzzle, randColIndex, randRowIndex, randNumber)) {
+      randomPuzzle[randColIndex][randRowIndex] = randNumber;
+    }
+
+  }
+  loadDefaultPuzzle(randomPuzzle)
+}
