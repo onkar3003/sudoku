@@ -14,6 +14,7 @@ This app provides the solution for random sudoku problems where you can put the 
   * After opening the index.js file the app will be opened with empty sudoku as read only grid.
   * You can add new input to the puzzle by pressing the Add New Input button it will enable the grid for edditing values after entring the values to grid you have to push the values by using the Push New Input button.
   * There is an option to clear all the grid values by using Clear Board button.
+  * There also an option to generate the Random inputs fot the Puzzle buy just clicking the Random Board button.
   * Solve button in the UI will get you the resultant puzzle with solved values.
 
 ## Complexity
